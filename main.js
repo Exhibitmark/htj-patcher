@@ -1,7 +1,6 @@
 const fs = require('fs');
 const path = require('path');
 
-
 let file = fs.readFileSync(process.argv[2]);
 let str_buffer = file.toString('hex')
 const patches = {
@@ -70,6 +69,11 @@ const patches = {
             }
         ]
     },
+}
+
+if(process.argv[3] == '60'){
+    delete patches.tick
+    console.log('Ignoring tick rate patch. It will remain at 60.')
 }
 
 function match(patch){
