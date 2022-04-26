@@ -1,0 +1,15 @@
+{
+  "name": "htj-patch",
+  "version": "1.0.0",
+  "main": "main.js",
+  "scripts": {
+    "build": "pkg main.js -t node16-win-x64 -o htj-patcher.exe",
+    "package": "npm run build && 7z a -tzip htj-patcher.zip htj-patcher.exe patched"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+  },
+  "description": ""
+}
